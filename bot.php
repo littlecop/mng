@@ -52,5 +52,4 @@ if (isset($update['message'])) {
 
 // Opsional: Untuk menghentikan proses eksekusi skrip agar tidak terus berjalan
 http_response_code(200);
-
 ?>
