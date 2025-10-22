@@ -123,7 +123,7 @@ body {
 .card {
     border: none;
     border-radius: 0.85rem;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 
 .card .card-body {

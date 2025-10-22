@@ -5,8 +5,6 @@ date_default_timezone_set('Asia/Jakarta');
 define('BOT_TOKEN', '8421633102:AAGdz0N9MzMXSBUhP_8ugK6u-NTTh4wxj_g');
 define('API_URL', 'https://api.telegram.org/bot' . BOT_TOKEN . '/');
 
-$query = mysqli_query($conn, "SELECT * FROM users");
-
 
 
 // Fungsi untuk mengirim pesan balasan
