@@ -1,4 +1,5 @@
 <?php
+include 'bot_connection.php';
 date_default_timezone_set('Asia/Jakarta');
 // 1. Ganti dengan Token API bot Anda yang didapat dari @BotFather
 define('BOT_TOKEN', '8421633102:AAGdz0N9MzMXSBUhP_8ugK6u-NTTh4wxj_g');

@@ -77,17 +77,19 @@ body {
 }
 
 .dashboard-main {
-    background-color: #f5f7fb;
+    background-color: #f2f4f8;
 }
 
 .dashboard-topbar {
-    padding: 0.9rem 1.5rem;
+    padding: 0.85rem 1.5rem;
     background: #ffffff;
-    border-bottom: 1px solid #e4e9f2;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .dashboard-content {
-    padding: 1.25rem 1.5rem 1.75rem;
+    padding: 1.4rem 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .stat-card {
@@ -170,6 +172,59 @@ body {
     font-size: 0.95rem;
 }
 
+.dashboard-metrics .col {
+    display: flex;
+}
+
+.metric-card {
+    background: #ffffff;
+    flex: 1 1 auto;
+    border-radius: 0.8rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    display: grid;
+    gap: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.metric-value {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.2;
+}
+
+.metric-sub {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.dashboard-section .card {
+    height: 100%;
+    border-radius: 0.9rem;
+}
+
+.dashboard-section .card-body > .table-responsive {
+    margin: 0 -0.35rem;
+}
+
+.list-group-flush .list-group-item {
+    padding: 0.55rem 0;
+    border: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.list-group-flush .list-group-item:last-child {
+    border-bottom: none;
+}
+
 .auth-wrapper {
     max-width: 460px;
     width: 100%;
@@ -215,6 +270,7 @@ body {
     }
 
     .dashboard-content {
-        padding: 1.25rem;
+        padding: 1.15rem;
+        max-width: 100%;
     }
 }
