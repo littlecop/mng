@@ -45,7 +45,9 @@ if (isset($update['message'])) {
     } elseif (strpos($text, '/botid') === 0) {
 	    $response_text = "Bot ID: 8421633102:AAGdz0N9MzMXSBUhP_8ugK6u-NTTh4wxj_g";
     } elseif (strpos($text, '/asu') === 0) {
-        $response_text = "kamu yang asu mas";
+        $response_text = "kamu yang asu mas :)";
+    } elseif (strpos($text, '/site') === 0) {
+        $response_text = "<a href='mng.jualkode.com'>jualkode.com'</a>";
     }
 
     // 4. Kirim Balasan
