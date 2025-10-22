@@ -4,6 +4,10 @@ date_default_timezone_set('Asia/Jakarta');
 define('BOT_TOKEN', '8421633102:AAGdz0N9MzMXSBUhP_8ugK6u-NTTh4wxj_g');
 define('API_URL', 'https://api.telegram.org/bot' . BOT_TOKEN . '/');
 
+$query = mysqli_query($conn, "SELECT * FROM users");
+
+
+
 // Fungsi untuk mengirim pesan balasan
 function sendMessage($chat_id, $text) {
     $parameters = array(
@@ -48,6 +52,22 @@ if (isset($update['message'])) {
         $response_text = "kamu yang asu mas :)";
     } elseif (strpos($text, '/site') === 0) {
         $response_text = "<a href='mng.jualkode.com'>jualkode.com</a>";
+    } elseif (strpos($text, '/users') === 0) {
+        $response_text = "👥 **DAFTAR PENGGUNA:**\n\n";
+
+        // 2. Lakukan Query ke Database
+        $query = mysqli_query($conn, "SELECT nama, level FROM users ORDER BY nama ASC");
+
+        if (mysqli_num_rows($query) > 0) {
+            $nomor = 1;
+            // 3. Loop untuk membangun string response
+            while($hasil = mysqli_fetch_assoc($query)) {
+                $response_text .= $nomor . ". Nama: *" . $hasil['name'] . "* (Level: " . $hasil['email'] . ")\n";
+                $nomor++;
+            }
+        } else {
+            $response_text = "❌ Tidak ada pengguna yang ditemukan.";
+        }
     }
 
     // 4. Kirim Balasan

@@ -34,36 +34,36 @@ foreach ($trends as $row) {
 
 include __DIR__ . '/includes/header.php';
 ?>
-<div class="row g-4 mb-4">
-    <div class="col-md-4">
-        <div class="stat-card">
-            <div class="label">Total Saldo</div>
-            <div class="value"><?php echo e(format_currency($cards['totalBalance'] ?? 0)); ?></div>
-            <div class="text-muted small mt-2">Akumulasi seluruh akun aktif.</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 dashboard-metrics mb-3">
+    <div class="col">
+        <div class="metric-card">
+            <span class="metric-label">Total Saldo</span>
+            <span class="metric-value"><?php echo e(format_currency($cards['totalBalance'] ?? 0)); ?></span>
+            <span class="metric-sub">Akumulasi seluruh akun aktif.</span>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="stat-card">
-            <div class="label">Pemasukan Bulan Ini</div>
-            <div class="value text-success"><?php echo e(format_currency($cards['monthlyIncome'] ?? 0)); ?></div>
-            <div class="text-muted small mt-2">Dibandingkan periode berjalan.</div>
+    <div class="col">
+        <div class="metric-card">
+            <span class="metric-label">Pemasukan Bulan Ini</span>
+            <span class="metric-value text-success"><?php echo e(format_currency($cards['monthlyIncome'] ?? 0)); ?></span>
+            <span class="metric-sub">Periode berjalan.</span>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="stat-card">
-            <div class="label">Pengeluaran Bulan Ini</div>
-            <div class="value text-danger"><?php echo e(format_currency($cards['monthlyExpense'] ?? 0)); ?></div>
-            <div class="text-muted small mt-2">
-                Arus kas bersih:
+    <div class="col">
+        <div class="metric-card">
+            <span class="metric-label">Pengeluaran Bulan Ini</span>
+            <span class="metric-value text-danger"><?php echo e(format_currency($cards['monthlyExpense'] ?? 0)); ?></span>
+            <span class="metric-sub">
+                Arus kas bersih
                 <span class="<?php echo ($cards['netCashflow'] ?? 0) >= 0 ? 'text-success' : 'text-danger'; ?>">
                     <?php echo e(format_currency($cards['netCashflow'] ?? 0)); ?>
                 </span>
-            </div>
+            </span>
         </div>
     </div>
 </div>
 
-<div class="row g-4">
+<div class="row g-3 dashboard-section">
     <div class="col-lg-8">
         <div class="card">
             <div class="card-body">
@@ -97,7 +97,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 </div>
 
-<div class="row g-4 mt-1">
+<div class="row g-3 dashboard-section mt-2">
     <div class="col-lg-6">
         <div class="card">
             <div class="card-body">
