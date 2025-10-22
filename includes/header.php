@@ -22,7 +22,7 @@ $flashMessages = get_flash_messages();
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="<?php echo $hideSidebar ? 'layout-auth' : 'layout-dashboard'; ?>">
-<?php if (!$hideSidebar): ?>
+<?php if (!$hideSidebar) { ?>
 <div class="dashboard-wrapper d-flex">
     <?php require __DIR__ . '/sidebar.php'; ?>
     <div class="dashboard-main flex-grow-1 d-flex flex-column">
@@ -46,7 +46,7 @@ $flashMessages = get_flash_messages();
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             <?php endforeach; ?>
-<?php else: ?>
+<?php } else { ?>
 <div class="auth-wrapper container py-5">
     <?php foreach ($flashMessages as $flash): ?>
         <div class="alert alert-<?php echo e($flash['type']); ?> alert-dismissible fade show" role="alert">
@@ -54,3 +54,4 @@ $flashMessages = get_flash_messages();
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endforeach; ?>
+<?php } ?>
