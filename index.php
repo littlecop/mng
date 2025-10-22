@@ -68,7 +68,7 @@ include __DIR__ . '/includes/header.php';
     </form>
     <p class="mt-4 mb-0 text-muted small">
         Gunakan akun default <strong>admin@example.com</strong> · <strong>admin123</strong>.
-        Ganti dari menu profil setelah masuk.
+        Segera ganti melalui database atau modul pengguna Anda sendiri.
     </p>
 </div>
 <?php
