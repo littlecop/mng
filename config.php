@@ -2,9 +2,9 @@
 declare(strict_types=1);
 
 const DB_HOST = 'localhost';
-const DB_NAME = 'mng_finance';
-const DB_USER = 'root';
-const DB_PASS = '';
+const DB_NAME = 'jualkode_mng_finance';
+const DB_USER = 'jualkode_dikaputrarahmawan009';
+const DB_PASS = 'G@m@techn0';
 
 /**
  * Returns a shared PDO connection instance.

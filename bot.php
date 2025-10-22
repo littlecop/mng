@@ -47,7 +47,7 @@ if (isset($update['message'])) {
     } elseif (strpos($text, '/asu') === 0) {
         $response_text = "kamu yang asu mas :)";
     } elseif (strpos($text, '/site') === 0) {
-        $response_text = "<a href='mng.jualkode.com'>jualkode.com'</a>";
+        $response_text = "<a href='mng.jualkode.com'>jualkode.com</a>";
     }
 
     // 4. Kirim Balasan
