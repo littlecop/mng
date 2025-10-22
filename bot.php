@@ -43,7 +43,9 @@ if (isset($update['message'])) {
     } elseif (strpos($text, '/waktu') === 0) {
         $response_text = "Waktu saat ini: " . date("H:i:s d-m-Y");
     } elseif (strpos($text, '/botid') === 0) {
-	$response_text = "Bot ID: 8421633102:AAGdz0N9MzMXSBUhP_8ugK6u-NTTh4wxj_g";
+	    $response_text = "Bot ID: 8421633102:AAGdz0N9MzMXSBUhP_8ugK6u-NTTh4wxj_g";
+    } elseif (strpos($text, '/asu') === 0) {
+        $response_text = "kamu yang asu mas";
     }
 
     // 4. Kirim Balasan

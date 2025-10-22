@@ -17,7 +17,7 @@ $flashMessages = get_flash_messages();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GTv18AJc5W4QwLhHnMuNoMNFc13JUO2c+hJ1ytY1/6Yr2vNh+lX6YsJhBKt3vDn" crossorigin="anonymous">
+          crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
