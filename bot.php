@@ -55,7 +55,7 @@ if (isset($update['message'])) {
         $response_text = "👥 **DAFTAR PENGGUNA:**\n\n";
 
         // 2. Lakukan Query ke Database
-        $query = mysqli_query($conn, "SELECT nama, level FROM users ORDER BY nama ASC");
+        $query = mysqli_query($conn, "SELECT name, email FROM users ORDER BY name ASC");
 
         if (mysqli_num_rows($query) > 0) {
             $nomor = 1;
